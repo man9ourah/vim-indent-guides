@@ -141,8 +141,8 @@ function! indent_guides#gui_highlight_colors()
     let l:hi_even_bg = indent_guides#lighten_or_darken_color(l:hi_odd_bg)
 
     " define the new highlights
-    exe 'hi IndentGuidesOdd  guibg=' . l:hi_odd_bg . ' guifg=' . l:hi_even_bg
-    exe 'hi IndentGuidesEven guibg=' . l:hi_even_bg . ' guifg=' . l:hi_odd_bg
+    exe 'hi IndentGuidesOdd  guibg=' . l:hi_odd_bg . ' guifg=white'
+    exe 'hi IndentGuidesEven guibg=' . l:hi_even_bg . ' guifg=white'
   end
 endfunction
 
