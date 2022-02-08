@@ -140,9 +140,12 @@ function! indent_guides#gui_highlight_colors()
     let l:hi_odd_bg  = indent_guides#lighten_or_darken_color(l:hi_normal_guibg)
     let l:hi_even_bg = indent_guides#lighten_or_darken_color(l:hi_odd_bg)
 
+    " use normal mode fg color
+    let l:hi_normal_fg = synIDattr(synIDtrans(hlID("Normal")), "fg#")
+
     " define the new highlights
-    exe 'hi IndentGuidesOdd  guibg=' . l:hi_odd_bg . ' guifg=white'
-    exe 'hi IndentGuidesEven guibg=' . l:hi_even_bg . ' guifg=white'
+    exe 'hi IndentGuidesOdd  guibg=' . l:hi_odd_bg . ' guifg=' . l:hi_normal_fg
+    exe 'hi IndentGuidesEven guibg=' . l:hi_even_bg . ' guifg=' . l:hi_normal_fg
   end
 endfunction
 
