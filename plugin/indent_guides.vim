@@ -91,5 +91,5 @@ augroup indent_guides
   autocmd ColorScheme * doautocmd indent_guides BufWinEnter
 
   " Trigger on tabswidth change
-  autocmd OptionSet shiftwidth,tabstop,expandtab call indent_guides#enable()
+  autocmd OptionSet shiftwidth,tabstop,expandtab call indent_guides#process_autocmds()
 augroup END
