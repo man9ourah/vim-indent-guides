@@ -61,6 +61,7 @@ call s:InitVariable('g:indent_guides_space_guides', 1)
 call s:InitVariable('g:indent_guides_tab_guides', 1)
 call s:InitVariable('g:indent_guides_soft_pattern', '\s')
 call s:InitVariable('g:indent_guides_default_mapping', 1)
+call s:InitVariable('g:indent_guides_exclude_popup', 1)
 
 if !exists('g:indent_guides_exclude_filetypes')
   let g:indent_guides_exclude_filetypes = ['help']
